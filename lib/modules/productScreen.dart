@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
+<<<<<<< HEAD
 import 'package:goshop/modules/checkout/payment_screen.dart';
+=======
+>>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
 import 'package:goshop/modules/zoom_drawer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../Layouts/shopLayout.dart';
@@ -194,6 +197,7 @@ class ProductScreen extends StatelessWidget {
                                       SizedBox(width: 10,),
                                       ElevatedButton(
                                         onPressed: () {
+<<<<<<< HEAD
                                           navigateTo(context, Payment(
                                             onFinish: (number) async {
                                               // payment done
@@ -212,6 +216,14 @@ class ProductScreen extends StatelessWidget {
                                               print('ddasdas');
                                             },
                                           ),
+=======
+                                          ScaffoldMessenger.of(context).showSnackBar(
+                                              SnackBar(
+                                                content: Text('Coming Soon ...'),
+                                                duration: Duration(seconds: 2),
+                                                backgroundColor: Colors.grey[300],
+                                              ),
+>>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
                                           );
                                         },
                                         child: Text('CHECKOUT'),

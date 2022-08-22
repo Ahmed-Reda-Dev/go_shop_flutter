@@ -17,7 +17,10 @@ class GetTokenSuccessState extends ShopStates{}
 class EditPressedState extends ShopStates{}
 class CloseTopSheet extends ShopStates{}
 class RefreshPage extends ShopStates{}
+<<<<<<< HEAD
 class ChangeStepState extends ShopStates{}
+=======
+>>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
 ///End of General states
 
 ///Login State

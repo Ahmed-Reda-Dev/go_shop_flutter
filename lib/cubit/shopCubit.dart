@@ -555,10 +555,13 @@ bool inCart = false;
   //   });
   // }
 
+<<<<<<< HEAD
   int currentStep = 0;
   void changeStep(int step){
     currentStep = step;
     emit(ChangeStepState());
   }
 
+=======
+>>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
 }

@@ -2,7 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+<<<<<<< HEAD
 import 'package:goshop/modules/checkout/checkout_screen.dart';
+=======
+>>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
 import 'package:goshop/modules/productScreen.dart';
 import 'package:goshop/modules/zoom_drawer.dart';
 import '../cubit/shopCubit.dart';
@@ -24,9 +27,13 @@ class CartScreen extends StatelessWidget {
         return Scaffold(
           bottomSheet: cartLength != 0
               ? InkWell(
+<<<<<<< HEAD
                   onTap: () {
                     navigateTo(context, CheckoutScreen());
                   },
+=======
+                  onTap: () {},
+>>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
                   child: Container(
                     width: double.infinity,
                     height: MediaQuery.of(context).size.height * 0.07,
@@ -135,7 +142,11 @@ class CartScreen extends StatelessWidget {
                                   onPressed: () {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       const SnackBar(
+<<<<<<< HEAD
                                         content: Text('Coming soon ...'),
+=======
+                                        content: Text('Comming soon ...'),
+>>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
                                       ),
                                     );
                                   },
@@ -395,5 +406,160 @@ class CartScreen extends StatelessWidget {
         ),
       ),
     );
+<<<<<<< HEAD
+=======
+    // child: Container(
+    //   height: 180,
+    //   padding: EdgeInsets.all(15),
+    //   child: Column(
+    //     children: [
+    //       Container(
+    //         height: 100,
+    //         child: Row(
+    //           children: [
+    //             Image(
+    //               image: NetworkImage('${model.product!.image}'),
+    //               width: 100,
+    //               height: 100,
+    //             ),
+    //             SizedBox(
+    //               width: 10,
+    //             ),
+    //             Expanded(
+    //               child: Column(
+    //                 mainAxisSize: MainAxisSize.min,
+    //                 crossAxisAlignment: CrossAxisAlignment.start,
+    //                 children: [
+    //                   Text(
+    //                     '${model.product!.name}',
+    //                     style: TextStyle(
+    //                       fontSize: 15,
+    //                     ),
+    //                     maxLines: 3,
+    //                     overflow: TextOverflow.ellipsis,
+    //                   ),
+    //                   Spacer(),
+    //                   Text(
+    //                     'EGP ' + '${model.product!.price}',
+    //                     style: TextStyle(
+    //                         fontSize: 20, fontWeight: FontWeight.bold),
+    //                   ),
+    //                   if (model.product!.discount != 0)
+    //                     Text(
+    //                       'EGP' + '${model.product!.oldPrice}',
+    //                       style: TextStyle(
+    //                           decoration: TextDecoration.lineThrough,
+    //                           color: Colors.grey),
+    //                     ),
+    //                 ],
+    //               ),
+    //             )
+    //           ],
+    //         ),
+    //       ),
+    //       Spacer(),
+    //       Row(
+    //         children: [
+    //           Container(
+    //             width: 20,
+    //             height: 20,
+    //             child: MaterialButton(
+
+    //               child: Icon(
+    //                 Icons.remove,
+    //                 size: 17,
+    //                 color: Colors.deepOrange,
+    //               ),
+    //               minWidth: 20,
+    //               //shape: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+    //               padding: EdgeInsets.zero,
+    //             ),
+    //           ),
+    //           SizedBox(
+    //             width: 5,
+    //           ),
+    //           Text(
+    //             '${model.quantity}',
+    //             style: TextStyle(fontSize: 20),
+    //           ),
+    //           SizedBox(
+    //             width: 5,
+    //           ),
+    //           Container(
+    //             width: 20,
+    //             height: 20,
+    //             child: MaterialButton(
+
+    //               child: Icon(
+    //                 Icons.add,
+    //                 size: 17,
+    //                 color: Colors.green[500],
+    //               ),
+    //               minWidth: 10,
+    //               //shape: OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
+    //               padding: EdgeInsets.zero,
+    //             ),
+    //           ),
+    //           Spacer(),
+    //           TextButton(
+    //             onPressed: () {
+    //               ShopCubit.get(context).addToCart(model.product!.id);
+    //               ShopCubit.get(context).changeToFavorite(model.product!.id);
+    //             },
+    //             child: Row(
+    //               children: [
+    //                 Icon(
+    //                   Icons.favorite_border_rounded,
+    //                   color: Colors.grey,
+    //                   size: 18,
+    //                 ),
+    //                 SizedBox(
+    //                   width: 2.5,
+    //                 ),
+    //                 Text(
+    //                   'Move to Wishlist',
+    //                   style: TextStyle(
+    //                     color: Colors.grey,
+    //                     fontSize: 13,
+    //                   ),
+    //                 ),
+    //               ],
+    //             ),
+    //           ),
+    //           SizedBox(
+    //             width: 5,
+    //           ),
+    //           Container(
+    //             height: 20,
+    //             width: 1,
+    //             color: Colors.grey[300],
+    //           ),
+    //           TextButton(
+    //               onPressed: () {
+    //                 ShopCubit.get(context).addToCart(model.product!.id);
+    //               },
+    //               child: Row(
+    //                 children: [
+    //                   Icon(
+    //                     Icons.delete_outline_outlined,
+    //                     color: Colors.grey,
+    //                     size: 18,
+    //                   ),
+    //                   SizedBox(
+    //                     width: 2.5,
+    //                   ),
+    //                   Text('Remove',
+    //                       style: TextStyle(
+    //                         color: Colors.grey,
+    //                         fontSize: 13,
+    //                       )),
+    //                 ],
+    //               )),
+    //         ],
+    //       )
+    //     ],
+    //   ),
+    // ),
+>>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
   }
 }
