@@ -1,6 +1,6 @@
 import 'dart:core';
 import 'package:flutter/material.dart';
-import 'package:goshop/modules/checkout/sercice.dart';
+import 'package:goshop/modules/checkout/payment_services.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class Payment extends StatefulWidget {

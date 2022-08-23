@@ -96,27 +96,6 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                   myDivider(),
                   InkWell(
                     onTap: (){
-                      navigateTo(context, AddressesScreen());
-                    },
-                    child: Container(
-                      color: Colors.white,
-                      padding: EdgeInsets.all(15),
-                      child: Row(
-                        children:
-                        [
-                          Icon(Icons.location_on_outlined,color: Colors.green,),
-                          separator(15, 0),
-                          Text('Addresses',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
-                          Spacer(),
-                          Icon(Icons.arrow_forward_ios_rounded),
-                          separator(10,0),
-                        ],
-                      ),
-                    ),
-                  ),
-                  myDivider(),
-                  InkWell(
-                    onTap: (){
                       navigateTo(context, ZDrawer());
                       ShopCubit.get(context).currentIndex = 3;
                     },
