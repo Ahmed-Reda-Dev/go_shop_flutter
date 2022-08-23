@@ -47,22 +47,22 @@ class ShopCubit extends Cubit<ShopStates>
     emit(HomeLoadingState());
     DioHelper.getData(
         url: HOME,
-      token: token
+        token: token
     ).then((value){
-    homeModel = HomeModel.fromJson(value.data);
-    print('Home '+homeModel!.status.toString());
-    homeModel!.data!.products.forEach((element)
-    {
-      favorites.addAll({
-        element.id : element.inFavorites
+      homeModel = HomeModel.fromJson(value.data);
+      print('Home '+homeModel!.status.toString());
+      homeModel!.data!.products.forEach((element)
+      {
+        favorites.addAll({
+          element.id : element.inFavorites
+        });
       });
-    });
-    homeModel!.data!.products.forEach((element)
-    {
-      cart.addAll({
-        element.id : element.inCart
+      homeModel!.data!.products.forEach((element)
+      {
+        cart.addAll({
+          element.id : element.inCart
+        });
       });
-    });
       emit(HomeSuccessState());
     }).catchError((error){
       emit(HomeErrorState());
@@ -91,9 +91,9 @@ class ShopCubit extends Cubit<ShopStates>
   void getCategoryData() {
     emit(CategoriesLoadingState());
     DioHelper.getData(
-        url: CATEGORIES,
+      url: CATEGORIES,
     ).then((value){
-        categoriesModel = CategoriesModel.fromJson(value.data);
+      categoriesModel = CategoriesModel.fromJson(value.data);
       print('Categories '+categoriesModel!.status.toString());
       emit(CategoriesSuccessState());
     }).catchError((error){
@@ -106,10 +106,10 @@ class ShopCubit extends Cubit<ShopStates>
   void getCategoriesDetailData( int? categoryID ) {
     emit(CategoryDetailsLoadingState());
     DioHelper.getData(
-      url: CATEGORIES_DETAIL,
-     query: {
-       'category_id':'$categoryID',
-     }
+        url: CATEGORIES_DETAIL,
+        query: {
+          'category_id':'$categoryID',
+        }
     ).then((value){
       categoriesDetailModel = CategoryDetailModel.fromJson(value.data);
       print('categories Detail '+categoriesDetailModel!.status.toString());
@@ -161,8 +161,8 @@ class ShopCubit extends Cubit<ShopStates>
   }) {
     emit(UpdateProfileLoadingState());
     DioHelper.putData(
-      url: UPDATE_PROFILE,
-      token: token,
+        url: UPDATE_PROFILE,
+        token: token,
         data: {
           'name':name,
           'phone': phone,
@@ -215,11 +215,11 @@ class ShopCubit extends Cubit<ShopStates>
 
     emit(ChangeFavoritesLoadingState());
     DioHelper.postData(
-      url: FAVORITES,
-      token: token,
-      data: {
-        'product_id': productID
-      }
+        url: FAVORITES,
+        token: token,
+        data: {
+          'product_id': productID
+        }
     ).then((value){
       changeToFavoritesModel = ChangeToFavoritesModel.fromjson(value.data);
       print(changeToFavoritesModel!.status);
@@ -236,7 +236,7 @@ class ShopCubit extends Cubit<ShopStates>
     });
   }
 
-/// CART API
+  /// CART API
   late AddCartModel  addCartModel;
   void addToCart(int? productID) {
     emit(AddCartLoadingState());
@@ -288,8 +288,8 @@ class ShopCubit extends Cubit<ShopStates>
   void getCartData() {
     emit(CartLoadingState());
     DioHelper.getData(
-        url: CART,
-        token: token,
+      url: CART,
+      token: token,
     ).then((value){
       cartModel = CartModel.fromJson(value.data);
       print('Get Cart '+ cartModel.status.toString());
@@ -395,8 +395,8 @@ class ShopCubit extends Cubit<ShopStates>
   void deleteAddress({required addressId}){
     emit(DeleteAddressLoadingState());
     DioHelper.deleteData(
-        url: 'addresses/$addressId',
-        token: token,
+      url: 'addresses/$addressId',
+      token: token,
     ).then((value){
       deleteAddressModel = UpdateAddressModel.fromJson(value.data);
       print('delete Address '+ deleteAddressModel!.status.toString());
@@ -459,7 +459,7 @@ class ShopCubit extends Cubit<ShopStates>
     }
   }
 
-bool isList = false;
+  bool isList = false;
   void changeListView() {
     isList = true;
     emit(ChangeListViewState());
@@ -474,7 +474,7 @@ bool isList = false;
     token = CacheHelper.getData('token');
     emit(GetTokenSuccessState());
   }
-bool inCart = false;
+  bool inCart = false;
   Widget topSheet(model,context)
   {
     if(inCart) {
@@ -555,13 +555,10 @@ bool inCart = false;
   //   });
   // }
 
-<<<<<<< HEAD
   int currentStep = 0;
   void changeStep(int step){
     currentStep = step;
     emit(ChangeStepState());
   }
 
-=======
->>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
 }

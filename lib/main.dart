@@ -1,10 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-<<<<<<< HEAD
-import 'package:goshop/modules/checkout/checkout_screen.dart';
-=======
->>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
 import 'package:goshop/modules/zoom_drawer.dart';
 import 'package:goshop/remoteNetwork/cacheHelper.dart';
 import 'package:goshop/remoteNetwork/dioHelper.dart';

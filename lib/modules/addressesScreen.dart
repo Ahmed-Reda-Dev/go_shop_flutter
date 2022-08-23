@@ -85,7 +85,6 @@ class AddressesScreen extends StatelessWidget {
               ),
             ),
           ),
-<<<<<<< HEAD
           body: SingleChildScrollView(
             physics: BouncingScrollPhysics(),
             child: Column(
@@ -97,21 +96,21 @@ class AddressesScreen extends StatelessWidget {
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemBuilder: (context, index) => ShopCubit.get(context)
-                                .addressModel
-                                .data!
-                                .data!
-                                .length == 0
+                        .addressModel
+                        .data!
+                        .data!
+                        .length == 0
                         ? Container()
                         : addressItem(
-                            ShopCubit.get(context)
-                                .addressModel
-                                .data!
-                                .data![index],
-                            context,
+                      ShopCubit.get(context)
+                          .addressModel
+                          .data!
+                          .data![index],
+                      context,
                     ),
                     separatorBuilder: (context, index) => SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01,
-                        ),
+                      height: MediaQuery.of(context).size.height * 0.01,
+                    ),
                     itemCount: ShopCubit.get(context)
                         .addressModel
                         .data!
@@ -124,84 +123,10 @@ class AddressesScreen extends StatelessWidget {
                 )
               ],
             ),
-=======
-          body: Stack(
-            alignment: AlignmentDirectional.bottomCenter,
-            children: [
-              SingleChildScrollView(
-                physics: BouncingScrollPhysics(),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
-                    ),
-                    ListView.separated(
-                        physics: NeverScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemBuilder: (context, index) => ShopCubit.get(context)
-                                    .addressModel
-                                    .data!
-                                    .data!
-                                    .length == 0
-                            ? Container()
-                            : addressItem(
-                                ShopCubit.get(context)
-                                    .addressModel
-                                    .data!
-                                    .data![index],
-                                context,
-                        ),
-                        separatorBuilder: (context, index) => SizedBox(
-                              height: MediaQuery.of(context).size.height * 0.01,
-                            ),
-                        itemCount: ShopCubit.get(context)
-                            .addressModel
-                            .data!
-                            .data!
-                            .length),
-                    Container(
-                      color: Colors.white,
-                      height: 70,
-                      width: double.infinity,
-                    )
-                  ],
-                ),
-              ),
-              // Container(
-              //   width: double.infinity,
-              //   height: 70,
-              //   color: Colors.white,
-              //   padding: EdgeInsets.symmetric(vertical: 10 ,horizontal: 15),
-              //   child: MaterialButton(
-              //     onPressed: (){
-              //       navigateTo(context, UpdateAddressScreen(isEdit: false,));
-              //       },
-              //     color: Colors.deepOrange,
-              //     //shape: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
-              //     child: Text('ADD A NEW ADDRESS',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.white),),
-              //   ),
-              // )
-            ],
->>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
           ),
         );
       },
     );
-<<<<<<< HEAD
-=======
-    // Container(
-    //                   width: double.infinity,
-    //                   height: 70,
-    //                   color: Colors.white,
-    //                   padding: EdgeInsets.symmetric(vertical: 10 ,horizontal: 15),
-    //                   child: MaterialButton(
-    //                     onPressed: (){},
-    //                     color: Colors.deepOrange,
-    //                     //shape: OutlineInputBorder(borderRadius: BorderRadius.circular(15)),
-    //                     child: Text('Add Address',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,letterSpacing: 2),),
-    //                   ),
-    //                 )
->>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
   }
 
   Widget addressItem(AddressData model, context) {
@@ -321,7 +246,6 @@ class AddressesScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-<<<<<<< HEAD
                 Flexible(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -354,38 +278,6 @@ class AddressesScreen extends StatelessWidget {
                       //
                     ],
                   ),
-=======
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('${model.city}',
-                        style: TextStyle(
-                          fontSize: 15,
-                        )),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
-                    ),
-                    Text('${model.region}',
-                        style: TextStyle(
-                          fontSize: 15,
-                        )),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
-                    ),
-                    Text('${model.details}',
-                        style: TextStyle(
-                          fontSize: 15,
-                        )),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.01,
-                    ),
-                    Text('${model.notes}',
-                        style: TextStyle(
-                          fontSize: 15,
-                        )),
-                    //
-                  ],
->>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
                 )
               ],
             ),

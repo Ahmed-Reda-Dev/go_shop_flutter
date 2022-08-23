@@ -24,10 +24,6 @@ class ShopLayout extends StatelessWidget {
       builder: (context,state) {
         ShopCubit cubit =  ShopCubit.get(context);
         return  Scaffold(
-<<<<<<< HEAD
-=======
-
->>>>>>> 5da8107dcaa0857534137476e44206c4cabbb5d5
           bottomSheet: showBottomSheet ?
           ShopCubit.get(context).cartModel.data!.cartItems.length!= 0 ? Container(
             width: double.infinity,
