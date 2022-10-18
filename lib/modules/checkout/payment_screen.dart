@@ -60,7 +60,7 @@ class PaymentState extends State<Payment> {
             },
           ),
         );
-        _scaffoldKey.currentState!.showSnackBar(snackBar);
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
       }
     });
   }

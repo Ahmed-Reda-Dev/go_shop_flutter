@@ -6,7 +6,6 @@ import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 import 'package:goshop/cubit/shopCubit.dart';
 import 'package:goshop/cubit/states.dart';
-import 'package:goshop/models/addressModels/addAddressModel.dart';
 import 'package:goshop/modules/checkout/payment_screen.dart';
 import 'package:goshop/shared/constants.dart';
 
@@ -14,7 +13,6 @@ import '../../models/addressModels/addressModel.dart';
 import '../../models/cartModels/cartModel.dart';
 import '../add&UpdateAddress.dart';
 import '../productScreen.dart';
-import 'edit_card.dart';
 
 class CheckoutScreen extends StatelessWidget {
 
@@ -184,8 +182,7 @@ class CheckoutScreen extends StatelessWidget {
                                   },
                                   autofocus: true,
                                   style: OutlinedButton.styleFrom(
-                                      primary: const Color(0xffE9BC6B),
-                                      shape: const RoundedRectangleBorder(
+                                      foregroundColor: const Color(0xffE9BC6B), shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(Radius.circular(50)),
                                       ),
                                       shadowColor: Colors.red),
@@ -218,9 +215,9 @@ class CheckoutScreen extends StatelessWidget {
                                                 },
                                               ),
                                             );
-                                            _scaffoldKey.currentState?.showSnackBar(snackBar);
+                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                             print('order id: ' + number);
-                                            print('ddasdas');
+                                            print('dastards');
                                           },
                                         ),
                                       ),
@@ -228,8 +225,7 @@ class CheckoutScreen extends StatelessWidget {
                                   },
                                   autofocus: true,
                                   style: OutlinedButton.styleFrom(
-                                    primary: Colors.white,
-                                    backgroundColor: const Color(0xffE99000),
+                                    foregroundColor: Colors.white, backgroundColor: const Color(0xffE99000),
                                     shape: const RoundedRectangleBorder(
                                         borderRadius: BorderRadius.all(Radius.circular(50))),
                                   ),
@@ -263,8 +259,7 @@ class CheckoutScreen extends StatelessWidget {
           },
           autofocus: true,
           style: OutlinedButton.styleFrom(
-            primary: const Color(0xffE99000),
-            shape: const RoundedRectangleBorder(
+            foregroundColor: const Color(0xffE99000), shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(45)),
             ),
           ),
@@ -371,8 +366,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                     autofocus: true,
                     style: OutlinedButton.styleFrom(
-                        primary: const Color(0xffE9BC6B),
-                        shape: const RoundedRectangleBorder(
+                        foregroundColor: const Color(0xffE9BC6B), shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(50)),
                         ),
                         shadowColor: Colors.red),
@@ -397,8 +391,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                     autofocus: true,
                     style: OutlinedButton.styleFrom(
-                      primary: Colors.white,
-                      backgroundColor: const Color(0xffE99000),
+                      foregroundColor: Colors.white, backgroundColor: const Color(0xffE99000),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(50))),
                     ),
@@ -473,8 +466,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                     autofocus: true,
                     style: OutlinedButton.styleFrom(
-                        primary: const Color(0xffE9BC6B),
-                        shape: const RoundedRectangleBorder(
+                        foregroundColor: const Color(0xffE9BC6B), shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(50)),
                         ),
                         shadowColor: Colors.red),
@@ -499,8 +491,7 @@ class CheckoutScreen extends StatelessWidget {
                     },
                     autofocus: true,
                     style: OutlinedButton.styleFrom(
-                      primary: Colors.white,
-                      backgroundColor: const Color(0xffE99000),
+                      foregroundColor: Colors.white, backgroundColor: const Color(0xffE99000),
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(50))),
                     ),
@@ -519,7 +510,7 @@ class CheckoutScreen extends StatelessWidget {
   }
 
   Widget summary(context) {
-    Size size = MediaQuery.of(context).size;
+    //Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       physics: const BouncingScrollPhysics(),
       child: Padding(

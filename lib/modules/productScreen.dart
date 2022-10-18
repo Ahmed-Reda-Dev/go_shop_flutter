@@ -1,11 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_conditional_rendering/conditional.dart';
 import 'package:goshop/modules/checkout/payment_screen.dart';
-import 'package:goshop/modules/zoom_drawer.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../Layouts/shopLayout.dart';
 import '../cubit/shopCubit.dart';
 import '../cubit/states.dart';
 import '../models/homeModels/productModel.dart';
@@ -207,9 +204,9 @@ class ProductScreen extends StatelessWidget {
                                                 },
                                               ),
                                             );
-                                            scaffoldKey.currentState?.showSnackBar(snackBar);
+                                            ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                             print('order id: ' + number);
-                                            print('ddasdas');
+                                            print('dastards');
                                           },
                                         ),
                                         );
